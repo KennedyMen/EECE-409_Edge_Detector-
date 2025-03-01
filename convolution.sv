@@ -19,13 +19,11 @@ module Convolution
     input logic BeginConvolution,
     input logic BeginGauss,
     input logic BeginSobel,
-    input logic [71:0] Pixels_In_Grayscale// the value for the image at the array address
+    input logic [71:0] Pixels_In_Grayscale,// the value for the image at the array address
+    output logic [7:0] Output_Pixel
     );
-    // star     
-    
-    
-    ting 
-    reg[COLDepth-1:0] image_array [0:Image_height-1][0:Image_width-1];// 2D image array 
+    // starting
+    reg[COLDepth-1:0] image_array [0:Block_Size-1][0:Block_Size-1];// 2D image array 
     // neccesary for making it possible for both the gaussian and sobel filter processing
     reg[3:0] addr_x, addr_y;// the neccesary row and column values for the 2d image array 
     // this should be passed into the module by whatever we are using for image processing 
@@ -39,11 +37,12 @@ module Convolution
         4'd3, 4'd4, 4'd2,
         4'd6, 4'd7, 4'd8
     };
+    reg[3:0] Gaussian_Out;
     //p
     //preparing image 
     reg [15:0] pixel_count;// tracking writes 
     bit image_ready;
-    always_ff @(posedge clk or posedge reset) begin 
+    always @(posedge clk or negedge reset) begin
         if (!reset) begin 
             integer i, j;
             for (i = 0; i < Block_Size; i++)
@@ -53,17 +52,15 @@ module Convolution
             image_ready <= 0;
         end else begin 
             if (!image_ready) begin
-                image_array[addr_x][addr_y] <=Pixel_In_Grayscale;//placing all information into  image array 
-                pixel_count <= pixel_count + 1;// counter when done 
+                image_array[addr_x][addr_y] <= Pixels_In_Grayscale;
+                pixel_count <= pixel_count + 1;
             end 
-            else if (pixel_count == Total_size-1) begin
+            else if (pixel_count == Block_Size-1) begin
                 image_ready <=1;// finished sending image to array 
             end
             if (!BeginWrite && !BeginConvolution) begin 
-                if(BeginGauss) output_array <= Gaussian_Out;
-                for 
-
-                
+                if(BeginGauss) 
+                Output_Pixel <= Gaussian_Out;
             end 
         end 
     end 
@@ -77,8 +74,8 @@ module img_process
     input logic BeginConvolution,
     input logic input_image_data,//write enable 
     input logic input_data_valid,
-    output_image_data [7:0],
-    out_data_ready
+    output image_data [7:0],
+    output  data_ready
     );
 endmodule
 module gradient_strength_processing

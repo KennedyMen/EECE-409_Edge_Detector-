@@ -8,40 +8,118 @@ INFO: Auto-config - Wrote:
     -f /home/deck/Documents/EECE-409_Edge_Detector-/.dvt/default.build.auto.1
 *** List of invocations ***
 Invocation #1 +dvt_init+dvt in /home/deck/Documents/EECE-409_Edge_Detector-/.dvt/default.build.auto.1 at line 9
-*** Done analyzing build configuration [147 ms] ***
+*** Done analyzing build configuration [225 ms] ***
 
 *** Start SystemVerilog build ***
 *** Invocation #1***
-Loading (1) /home/deck/Documents/EECE-409_Edge_Detector-/test.sv ...
-Done /home/deck/Documents/EECE-409_Edge_Detector-/test.sv [83 ms, 53 lines, SystemVerilog_2012] ...
-*** Done invocation #1 [85 ms] ***
-*** Done parsing [LT 22 ms, PT 85 ms] ***
-*** Total number of lines [53] ***
+Loading (1) /home/deck/Documents/EECE-409_Edge_Detector-/Img_process.sv ...
+Done /home/deck/Documents/EECE-409_Edge_Detector-/Img_process.sv [1 ms, 2 lines, SystemVerilog_2012] ...
+Loading (2) /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv ...
+Done /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv [56 ms, 111 lines, SystemVerilog_2012] ...
+*** Done invocation #1 [60 ms] ***
+*** Done parsing [LT 87 ms, PT 60 ms] ***
+*** Total number of lines [113] ***
 Performing post full build actions ...
-Performing post full build step 1 (SRI) [4 ms] ...
-Performing post full build step 2 (RI) [2 ms] ...
+Performing post full build step 1 (SRI) [1 ms] ...
+Performing post full build step 2 (RI) [1 ms] ...
 Performing post full build step 3 (RCP) [0 ms] ...
-*** Files summary [1 total, 1 unique, 0 optimized] ***
-*** Done SystemVerilog build [255 ms] ***
+*** Files summary [2 total, 2 unique, 0 optimized] ***
+*** Done SystemVerilog build [346 ms] ***
 
 *** Start mixed mode extension build ***
-Performing mixed post full build step (VLOG - RI) [1 ms] ...
+Performing mixed post full build step (VLOG - RI) [0 ms] ...
 *** Warning: UNSPECIFIED_TOP: Please specify a -top module/entity/configuration in the project build file
-Performing mixed post full build step (MIXED - ELAB) [25 ms] ...
-Performing mixed post full build step (MIXED - UNEL) [103 ms] ...
+Performing mixed post full build step (MIXED - ELAB) [22 ms] ...
+Performing mixed post full build step (MIXED - UNEL) [104 ms] ...
+*** Error: UNDECLARED_IDENTIFIER: Identifier 'Pixel_In_Grayscale' is not declared
+    at line 55 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:55 [compile index 2]
 *** Warning: UNELABORATED_MODULE: Module 'work.Convolution' is not elaborated
-    at line 1 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:1 [compile index 1]
+    at line 4 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:4 [compile index 2]
+*** Warning: UNELABORATED_MODULE: Module 'work.img_process' is not elaborated
+    at line 69 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:69 [compile index 2]
+*** Warning: UNELABORATED_MODULE: Module 'work.gradient_strength_processing' is not elaborated
+    at line 81 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:81 [compile index 2]
+*** Warning: UNELABORATED_MODULE: Module 'work.gradient_direction_processing' is not elaborated
+    at line 91 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:91 [compile index 2]
+*** Warning: UNELABORATED_MODULE: Module 'work.hysteresis' is not elaborated
+    at line 101 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:101 [compile index 2]
 Performing mixed post full build step (VLOG - RD) [1 ms] ...
 Performing mixed post full build step (VLOG - US) [51 ms] ...
-*** Warning: SIGNAL_NEVER_USED: Signal 'startC' is never used
-    at line 13 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:13 [compile index 1]
-*** Warning: SIGNAL_NEVER_USED: Signal 'pixel_out' is never used
-    at line 17 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:17 [compile index 1]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginSobel' is never used
+    at line 21 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:21 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Pixels_In_Grayscale' is never used
+    at line 22 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:22 [compile index 2]
 *** Warning: SIGNAL_NEVER_READ: Signal 'image_array' is never read
-    at line 20 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:20 [compile index 1]
-*** Warning: SIGNAL_NEVER_USED: Signal 'Gaussian_Out' is never used
-    at line 22 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:22 [compile index 1]
+    at line 26 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:26 [compile index 2]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'addr_x' is never written
+    at line 28 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:28 [compile index 2]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'addr_y' is never written
+    at line 28 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:28 [compile index 2]
 *** Warning: SIGNAL_NEVER_READ: Signal 'gaussian_filter_matrix' is never read
-    at line 23 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:23 [compile index 1]
-*** Done mixed mode extension build [199 ms] ***
-*** Total build time [688 ms] ***
+    at line 30 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:30 [compile index 2]
+*** Warning: SIGNAL_NEVER_READ: Signal 'sobel_filter_matrix' is never read
+    at line 35 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:35 [compile index 2]
+*** Warning: SIGNAL_NEVER_WRITTEN: Signal 'Gaussian_Out' is never written
+    at line 40 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:40 [compile index 2]
+*** Warning: SIGNAL_NOT_RESET: Signal 'Output_Pixel' is not reset
+    at line 63 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:63 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'clk' is never used
+    at line 71 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:71 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'reset' is never used
+    at line 72 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:72 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginWrite' is never used
+    at line 73 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:73 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginConvolution' is never used
+    at line 74 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:74 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'input_image_data' is never used
+    at line 75 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:75 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'input_data_valid' is never used
+    at line 76 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:76 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'image_data' is never used
+    at line 77 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:77 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'data_ready' is never used
+    at line 78 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:78 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'clk' is never used
+    at line 82 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:82 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'reset' is never used
+    at line 83 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:83 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginWrite' is never used
+    at line 84 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:84 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginStrength' is never used
+    at line 85 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:85 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Full_image_x' is never used
+    at line 86 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:86 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Full_image_y' is never used
+    at line 87 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:87 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Stregnth_Image' is never used
+    at line 88 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:88 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'clk' is never used
+    at line 92 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:92 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'reset' is never used
+    at line 93 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:93 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginWrite' is never used
+    at line 94 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:94 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginDirection' is never used
+    at line 95 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:95 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Full_image_x' is never used
+    at line 96 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:96 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Full_image_y' is never used
+    at line 97 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:97 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Direction_Image' is never used
+    at line 98 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:98 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'clk' is never used
+    at line 102 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:102 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'reset' is never used
+    at line 103 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:103 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginWrite' is never used
+    at line 104 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:104 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'BeginHysteresis' is never used
+    at line 105 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:105 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Full_image_Strength' is never used
+    at line 106 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:106 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Full_image_Direction' is never used
+    at line 107 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:107 [compile index 2]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Hysteresis_Image' is never used
+    at line 108 in /home/deck/Documents/EECE-409_Edge_Detector-/convolution.sv:108 [compile index 2]
+*** Done mixed mode extension build [201 ms] ***
+*** Total build time [880 ms] ***
