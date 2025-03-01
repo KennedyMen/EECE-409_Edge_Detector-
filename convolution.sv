@@ -81,14 +81,33 @@ module img_process
     out_data_ready
     );
 endmodule
-module gradient_processing
+module gradient_strength_processing
     (input logic clk,// clk signal 
     input logic reset,// reset signal 
     input logic BeginWrite,//write enable 
-    input logic BeginConvolution,
+    input logic BeginStrength,
     input [7:0] Full_image_x [0:512],
     input [7:0] Full_image_y [0:512],
-    output [7:0] Final Image [0:512]
-    )
-hyster
-module 
+    output [7:0] Stregnth_Image [0:512]
+    );
+endmodule
+module gradient_direction_processing
+    (input logic clk,// clk signal 
+    input logic reset,// reset signal 
+    input logic BeginWrite,//write enable 
+    input logic BeginDirection,
+    input [7:0] Full_image_x [0:512],
+    input [7:0] Full_image_y [0:512],
+    output [7:0] Direction_Image [0:512]
+    );
+endmodule
+module hysteresis 
+    (input logic clk,// clk signal 
+    input logic reset,// reset signal 
+    input logic BeginWrite,//write enable 
+    input logic BeginHysteresis,
+    input [7:0] Full_image_Strength [0:512],
+    input [7:0] Full_image_Direction [0:512],
+    output [7:0] Hysteresis_Image [0:512]
+    );
+endmodule 
