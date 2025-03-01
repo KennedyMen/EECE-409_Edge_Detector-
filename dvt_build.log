@@ -8,44 +8,40 @@ INFO: Auto-config - Wrote:
     -f /home/deck/Documents/EECE-409_Edge_Detector-/.dvt/default.build.auto.1
 *** List of invocations ***
 Invocation #1 +dvt_init+dvt in /home/deck/Documents/EECE-409_Edge_Detector-/.dvt/default.build.auto.1 at line 9
-*** Done analyzing build configuration [308 ms] ***
+*** Done analyzing build configuration [147 ms] ***
 
 *** Start SystemVerilog build ***
 *** Invocation #1***
 Loading (1) /home/deck/Documents/EECE-409_Edge_Detector-/test.sv ...
-Done /home/deck/Documents/EECE-409_Edge_Detector-/test.sv [40 ms, 32 lines, SystemVerilog_2012] ...
-*** Done invocation #1 [42 ms] ***
-*** Done parsing [LT 26 ms, PT 42 ms] ***
-*** Total number of lines [32] ***
-*** Error: SYSTEM_VERILOG_2012: Unexpected token 'endmodule'
-    at line 31 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:31 [compile index 1][invocation 1]
+Done /home/deck/Documents/EECE-409_Edge_Detector-/test.sv [83 ms, 53 lines, SystemVerilog_2012] ...
+*** Done invocation #1 [85 ms] ***
+*** Done parsing [LT 22 ms, PT 85 ms] ***
+*** Total number of lines [53] ***
 Performing post full build actions ...
-Performing post full build step 1 (SRI) [24 ms] ...
-Performing post full build step 2 (RI) [1 ms] ...
+Performing post full build step 1 (SRI) [4 ms] ...
+Performing post full build step 2 (RI) [2 ms] ...
 Performing post full build step 3 (RCP) [0 ms] ...
 *** Files summary [1 total, 1 unique, 0 optimized] ***
-*** Done SystemVerilog build [288 ms] ***
+*** Done SystemVerilog build [255 ms] ***
 
 *** Start mixed mode extension build ***
 Performing mixed post full build step (VLOG - RI) [1 ms] ...
 *** Warning: UNSPECIFIED_TOP: Please specify a -top module/entity/configuration in the project build file
-Performing mixed post full build step (MIXED - ELAB) [31 ms] ...
-Performing mixed post full build step (MIXED - UNEL) [53 ms] ...
+Performing mixed post full build step (MIXED - ELAB) [25 ms] ...
+Performing mixed post full build step (MIXED - UNEL) [103 ms] ...
 *** Warning: UNELABORATED_MODULE: Module 'work.Convolution' is not elaborated
     at line 1 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:1 [compile index 1]
 Performing mixed post full build step (VLOG - RD) [1 ms] ...
 Performing mixed post full build step (VLOG - US) [51 ms] ...
-*** Warning: SIGNAL_NEVER_USED: Signal 'clk' is never used
-    at line 12 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:12 [compile index 1]
-*** Warning: SIGNAL_NEVER_USED: Signal 'reset' is never used
-    at line 13 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:13 [compile index 1]
 *** Warning: SIGNAL_NEVER_USED: Signal 'startC' is never used
-    at line 14 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:14 [compile index 1]
-*** Warning: SIGNAL_NEVER_USED: Signal 'BufferInput' is never used
-    at line 15 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:15 [compile index 1]
-*** Warning: SIGNAL_NEVER_USED: Signal 'bufferOutput' is never used
-    at line 16 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:16 [compile index 1]
-*** Warning: SIGNAL_NEVER_READ: Signal 'filter_matrix' is never read
-    at line 21 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:21 [compile index 1]
-*** Done mixed mode extension build [161 ms] ***
-*** Total build time [853 ms] ***
+    at line 13 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:13 [compile index 1]
+*** Warning: SIGNAL_NEVER_USED: Signal 'pixel_out' is never used
+    at line 17 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:17 [compile index 1]
+*** Warning: SIGNAL_NEVER_READ: Signal 'image_array' is never read
+    at line 20 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:20 [compile index 1]
+*** Warning: SIGNAL_NEVER_USED: Signal 'Gaussian_Out' is never used
+    at line 22 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:22 [compile index 1]
+*** Warning: SIGNAL_NEVER_READ: Signal 'gaussian_filter_matrix' is never read
+    at line 23 in /home/deck/Documents/EECE-409_Edge_Detector-/test.sv:23 [compile index 1]
+*** Done mixed mode extension build [199 ms] ***
+*** Total build time [688 ms] ***
